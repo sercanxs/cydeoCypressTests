@@ -142,7 +142,7 @@ context('Cypress.log', () => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
 
-  it('Control what is printed to the Command Log', () => {
+  xit('Control what is printed to the Command Log', () => {
     // https://on.cypress.io/cypress-log
   })
 })
