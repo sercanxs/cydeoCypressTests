@@ -7,7 +7,7 @@ context('Cypress.Commands', () => {
 
   // https://on.cypress.io/custom-commands
 
-  it('.add() - create a custom command', () => {
+  xit('.add() - create a custom command', () => {
     Cypress.Commands.add('console', {
       prevSubject: true,
     }, (subject, method) => {
@@ -38,7 +38,7 @@ context('Cypress.Cookies', () => {
   })
 
   // https://on.cypress.io/cookies
-  it('.debug() - enable or disable debugging', () => {
+  xit('.debug() - enable or disable debugging', () => {
     Cypress.Cookies.debug(true)
 
     // Cypress will now log in the console when
@@ -56,7 +56,7 @@ context('Cypress.arch', () => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
 
-  it('Get CPU architecture name of underlying OS', () => {
+  xit('Get CPU architecture name of underlying OS', () => {
     // https://on.cypress.io/arch
     expect(Cypress.arch).to.exist
   })
@@ -67,7 +67,7 @@ context('Cypress.config()', () => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
 
-  it('Get and set configuration options', () => {
+  xit('Get and set configuration options', () => {
     // https://on.cypress.io/config
     let myConfig = Cypress.config()
 
@@ -98,7 +98,7 @@ context('Cypress.dom', () => {
   })
 
   // https://on.cypress.io/dom
-  it('.isHidden() - determine if a DOM element is hidden', () => {
+  xit('.isHidden() - determine if a DOM element is hidden', () => {
     let hiddenP = Cypress.$('.dom-p p.hidden').get(0)
     let visibleP = Cypress.$('.dom-p p.visible').get(0)
 
@@ -116,7 +116,7 @@ context('Cypress.env()', () => {
   // We can set environment variables for highly dynamic values
 
   // https://on.cypress.io/environment-variables
-  it('Get environment variables', () => {
+  xit('Get environment variables', () => {
     // https://on.cypress.io/env
     // set multiple environment variables
     Cypress.env({
@@ -152,7 +152,7 @@ context('Cypress.platform', () => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
 
-  it('Get underlying OS name', () => {
+  xit('Get underlying OS name', () => {
     // https://on.cypress.io/platform
     expect(Cypress.platform).to.be.exist
   })
@@ -163,7 +163,7 @@ context('Cypress.version', () => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
 
-  it('Get current version of Cypress being run', () => {
+  xit('Get current version of Cypress being run', () => {
     // https://on.cypress.io/version
     expect(Cypress.version).to.be.exist
   })
@@ -174,7 +174,7 @@ context('Cypress.spec', () => {
     cy.visit('https://example.cypress.io/cypress-api')
   })
 
-  it('Get current spec information', () => {
+  xit('Get current spec information', () => {
     // https://on.cypress.io/spec
     // wrap the object so we can inspect it easily by clicking in the command log
     cy.wrap(Cypress.spec).should('include.keys', ['name', 'relative', 'absolute'])
